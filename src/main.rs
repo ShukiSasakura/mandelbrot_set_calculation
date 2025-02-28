@@ -26,8 +26,6 @@ fn main() {
 
     let mut pixels = vec![0; bounds.0 * bounds.1];
 
-    println!("thread_num,time");
-
     // 計算時間計測開始
     let start_time = Instant::now();
 
