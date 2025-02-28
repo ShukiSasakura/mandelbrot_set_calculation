@@ -26,6 +26,8 @@ fn main() {
 
     let mut pixels = vec![0; bounds.0 * bounds.1];
 
+    println!("thread_num,time");
+
     // 計算時間計測開始
     let start_time = Instant::now();
 
@@ -56,7 +58,7 @@ fn main() {
     let elapsed_time = elapsed.as_nanos() as f64;
     let elapsed_time = elapsed_time / 1000000000.0;
 
-    println!("{:?}", elapsed_time);
+    println!("{},{:?}", args.thread_num, elapsed_time);
 
     let _ = write_image("mandelbrot.png", &mut pixels, bounds);
 }
