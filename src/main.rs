@@ -9,11 +9,11 @@ use std::fs::File;
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
 struct Args {
-    #[arg(short, long)]
+    #[arg(short, long, default_value_t = 20000)]
     width: usize,
-    #[arg(short, long)]
+    #[arg(short, long, default_value_t = 15000)]
     height: usize,
-    #[arg(short, long)]
+    #[arg(short, long, default_value_t = 1)]
     thread_num: usize,
 }
 
