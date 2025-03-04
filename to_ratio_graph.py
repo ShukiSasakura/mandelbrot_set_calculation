@@ -22,7 +22,7 @@ else:
 
 # csv をデータフレームとして読み込む
 wasm_df = pd.read_csv(wasm_csv, names=['thread_num', 'time'])
-native_df = pd.read_csv(native_tsv, names=['thread_num', 'time'])
+native_df = pd.read_csv(native_csv, names=['thread_num', 'time'])
 
 # tsv から特定のカラムを取り出す場合の例
 # https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html
